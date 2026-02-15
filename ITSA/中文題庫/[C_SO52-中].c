@@ -10,16 +10,16 @@ int main()
         scanf("%d", &a[i]);
     }
     //泡沫排序
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n-1; i++)
     {
-        for (int j = 0; j < i; j++)
+        for (int j = 0; j <n-1- i; j++)
         {
-            if (a[i] > a[j])
+            if (a[j] < a[j+1])
             {
                 int temp = 0;
-                temp = a[i];
-                a[i] = a[j];
-                a[j] = temp;
+                temp = a[j];
+                a[j] = a[j+1];
+                a[j+1] = temp;
             }
         }
     }
